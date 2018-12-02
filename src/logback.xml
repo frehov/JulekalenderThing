@@ -10,7 +10,24 @@
         </encoder>
     </appender>
 
+    <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>taskId</key>
+            <defaultValue>main</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="FILE-${userid}" class="ch.qos.logback.core.FileAppender">
+                <file>logs/${taskId}.log</file>
+                <append>false</append>
+                <layout class="ch.qos.logback.classic.PatternLayout">
+                    <pattern>%d{ISO8601} [%thread] %-5level %logger{25}::%method - %msg%n</pattern>
+                </layout>
+            </appender>
+        </sift>
+    </appender>
+
     <root level="debug">
         <appender-ref ref="STDOUT" />
+        <appender-ref ref="SIFT" />
     </root>
 </configuration>

@@ -43,11 +43,4 @@ public class Luke2 implements Solution {
             e.printStackTrace();
         }
     }
-
-    @Override
-    public void run() {
-        logger.info("Started running!");
-        solve();
-        logger.info("Finished running!");
-    }
 }
