@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.crappyengineering.Answer;
+import com.crappyengineering.helper.Answer;
 import com.crappyengineering.Solution;
 import com.crappyengineering.helper.luke2.Line;
 import org.slf4j.Logger;
@@ -29,11 +29,10 @@ public class Luke2 implements Solution {
     @Override
     public void solve() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(location).openStream()))) {
-            String line;
+            String input;
 
-            while ((line = reader.readLine()) != null) {
-                String[] points = line.split(";");
-                slopeMap.compute(Line.of(points).getSlope(), (key, value) -> value == null ? 1 : value+1);
+            while ((input = reader.readLine()) != null) {
+                slopeMap.compute(Line.of(input.split(";")).getSlope(), (key, value) -> value == null ? 1 : value+1);
             }
 
             sum = slopeMap.values().stream().reduce(0, (integer, integer2) -> integer > integer2 ? integer : integer2);

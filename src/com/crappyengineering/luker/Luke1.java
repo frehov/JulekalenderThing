@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import com.crappyengineering.Answer;
+import com.crappyengineering.helper.Answer;
 import com.crappyengineering.Solution;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,11 +25,11 @@ public class Luke1 implements Solution {
     @Override
     public void solve() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(new URL(location).openStream()))) {
-            String line;
+            String input;
             long currentNumber = 0;
 
-            while ((line = reader.readLine()) != null) {
-                long number = Long.parseLong(line);
+            while ((input = reader.readLine()) != null) {
+                long number = Long.parseLong(input);
 
                 if (number >= currentNumber) {
                     currentNumber = number;

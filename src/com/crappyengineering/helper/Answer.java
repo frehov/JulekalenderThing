@@ -1,4 +1,4 @@
-package com.crappyengineering;
+package com.crappyengineering.helper;
 
 public class Answer{
 
