@@ -28,9 +28,10 @@ public class Luke3 implements Solution {
     @Override
     public void solve() {
         List<Long> primeList = Primes.generateAllPrimesBelow(primeLimit);
-
+        final long maxNum2s = (long)Math.pow(2, 10);
 
         List<List<Long>> factorListList = LongStream.rangeClosed((long) Math.pow(2, 24), limit).parallel().boxed()
+                .filter(aLong -> aLong%maxNum2s == 0)
                 .map(integer -> factorize(primeList, integer))
                 .filter(integers -> integers.size() == 24)
                 .collect(Collectors.toList());
