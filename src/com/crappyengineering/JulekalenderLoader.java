@@ -17,14 +17,14 @@ public class JulekalenderLoader {
     private final static Class[][] constructorParameters = {
             {String.class},
             {String.class},
-            {Void.class}
+            {Long.class, Integer.class, Long.class}
 
     };
 
     private final static Object[][] constructorInputs = {
             {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-vekksort.txt"},
             {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-rain.txt"},
-            {null}
+            {4294967296L, 24, 1000L}
     };
 
 

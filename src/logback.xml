@@ -26,6 +26,8 @@
         </sift>
     </appender>
 
+    <logger name="com.crappyengineering.luker.Luke3" level="INFO"/>
+
     <root level="debug">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="SIFT" />
