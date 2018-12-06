@@ -2,8 +2,10 @@ package com.crappyengineering;
 
 import static java.lang.Class.forName;
 import static java.lang.String.format;
+import static java.util.Arrays.asList;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +20,9 @@ public class JulekalenderLoader {
             {String.class},
             {String.class},
             {Long.class, Integer.class, Long.class},
-            {String.class, Integer.class}
+            {String.class, Integer.class},
+            {List.class},
+            {Long.class, Long.class}
 
     };
 
@@ -26,7 +30,9 @@ public class JulekalenderLoader {
             {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-vekksort.txt"},
             {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-rain.txt"},
             {4294967296L, 24, 1000L},
-            {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-pokemon-jakt.png", 8}
+            {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-pokemon-jakt.png", 8},
+            {asList(1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1)},
+            {1L, 18163106L}
     };
 
 
