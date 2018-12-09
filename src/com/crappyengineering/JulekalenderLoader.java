@@ -22,7 +22,10 @@ public class JulekalenderLoader {
             {Long.class, Integer.class, Long.class},
             {String.class, Integer.class},
             {List.class},
-            {Long.class, Long.class}
+            {Long.class, Long.class},
+            {Void.class},
+            {Void.class},
+            {String.class, String.class, String.class}
 
     };
 
@@ -32,7 +35,10 @@ public class JulekalenderLoader {
             {4294967296L, 24, 1000L},
             {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-pokemon-jakt.png", 8},
             {asList(1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1)},
-            {1L, 18163106L}
+            {1L, 18163106L},
+            {null},
+            {null},
+            {"https://s3-eu-west-1.amazonaws.com/knowit-julekalender-2018/input-hashchain.json", "MD5", "julekalender"}
     };
 
 

@@ -4,7 +4,12 @@ Simple loader that will load all solutions located in a given package X that iml
 ## Prerequisites
 
 ### External libraries
-The following is a list of dependencies required by different parts of the loader.
+The following is a list of dependencies required by different parts of the loader or solutions.
+
+#### Solutions
+##### Solution 9
+- gson-2.8.5.jar
+
 #### Logging Dependencies
 - logback-core-1.2.3.jar
 - logback-classic-1.2.3.jar
